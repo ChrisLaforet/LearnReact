@@ -1,10 +1,9 @@
-const BlogList = (props) => {
-    // notice the use of props.blogs to get what was passed
+const BlogList = ({blogs, title}) => {
 
     return (
        <div className="blog-list">
-           <h2>{props.title}</h2>
-                {props.blogs.map(blog => (
+           <h2>{title}</h2>
+                {blogs.map(blog => (
                     <div className="blog-preview" key={blog.id} >
                         <h2>{ blog.title }</h2>
                         <p>Written by { blog.author }</p>
