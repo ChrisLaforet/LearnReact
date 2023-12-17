@@ -4,6 +4,8 @@ import BlogList from "./BlogList";
 
 const Home = () => {
 
+    // Json server startup: npx json-server --watch data/db.json --port 8000
+
     const [blogs, setBlogs] = useState([
         { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
         { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
@@ -23,6 +25,10 @@ const Home = () => {
 //        console.log(blogs);
         console.log(name);
     }, [name]);
+
+    // useEffect(() => {
+    //     console.log('Multiple effects')
+    // });
 
   return (
       <div className="home">
